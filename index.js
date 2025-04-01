@@ -19,11 +19,12 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOptions = {
-   origin:'http://localhost:3000',
-   credentials:true
-}
+  origin: "https://netflix-frontend-nine-theta.vercel.app", // your Vercel frontend URL
+  credentials: true,
+};
 
 app.use(cors(corsOptions));
+
 
 //api use
 app.use("/api/v1/user", userRoute);
